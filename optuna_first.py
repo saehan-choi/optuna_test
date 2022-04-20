@@ -69,7 +69,7 @@ def objective(trial):
 
     # Generate the model.
     model = define_model(trial).to(DEVICE)
-
+    print(model)
     # Generate the optimizers.
     optimizer_name = trial.suggest_categorical("optimizer", ["Adam", "RMSprop", "SGD"])
     lr = trial.suggest_float("lr", 1e-5, 1e-1, log=True)
