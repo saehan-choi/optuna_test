@@ -19,8 +19,8 @@ from torchvision import datasets
 from torchvision import transforms
 
 
-DEVICE = torch.device("cpu")
-BATCHSIZE = 128
+DEVICE = torch.device("cuda")
+BATCHSIZE = 512
 CLASSES = 10
 DIR = os.getcwd()
 EPOCHS = 10
